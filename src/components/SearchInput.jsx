@@ -44,9 +44,12 @@ export default function SearchInput() {
   };
 
   const debouncedSearchHandler = useCallback(debounce(searchHandler), []);
+  
+  
   return (
-    <div>
-      <input onChange={debouncedSearchHandler} />
+    <div className="wrapper">
+      <input id="new-web-search-input" onChange={debouncedSearchHandler} />
+      
       <SearchSuggestions suggetions={suggetions} />
     </div>
   );
